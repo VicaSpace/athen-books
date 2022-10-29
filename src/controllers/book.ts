@@ -1,14 +1,15 @@
-import { getBookRate } from "../services/rate";
+import book from '../../models/book'
+import { getBookRate } from '../services/rate'
 
 const db = require('../../models')
 
 async function getAllBooks(req: any, res: any) {
-    const books = await db.Book.findAll();
-    for (let id in books) {
-        const rate = await getBookRate(books[id].id);
-        books[id]['rate'] = rate || 0;
+    const books = await db.Book.findAll()
+    for (const id in books) {
+        const rate = await getBookRate(books[id].id)
+        books[id].dataValues['rate'] = rate || 0
     }
-    res.json(books);
+    res.json(books)
 }
 
 export {

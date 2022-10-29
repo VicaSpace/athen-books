@@ -1,10 +1,10 @@
-import {Router} from 'express';
-import { getAllAuthor } from '../controllers/author';
+import {Router} from 'express'
+import { getAllAuthor } from '../controllers/author'
 
-const router = Router();
+const router = Router()
 
-router.get('/', getAllAuthor);
+router.get('/', getAllAuthor)
 
 export {
-	router as authorRoute
-};
+    router as authorRoute
+}

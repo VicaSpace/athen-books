@@ -1,0 +1,177 @@
+'use strict'
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+    async up (queryInterface, Sequelize) {
+        await queryInterface.bulkInsert('Authors', [
+            {
+                'id': 1,
+                'name': 'J. K. Rowling',
+                'bornOn': '1965-07-30T16:00:00.000Z',
+                'spouce': 'Neil Murray',
+                'children': 3,
+                'bornIn': 'USA',
+                'img': 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Neil_murray_bassist.jpg',
+                'createdAt': '2022-10-26T03:15:02.165Z',
+                'updatedAt': '2022-10-26T03:15:02.165Z'
+            },
+            {
+                'id': 2,
+                'name': 'Jeffrey Archer',
+                'bornOn': '1940-04-14T17:00:00.000Z',
+                'spouce': 'Mary Weeden',
+                'children': 2,
+                'bornIn': null,
+                'img': 'https://pbs.twimg.com/profile_images/3751745623/11bd5e198e1f0f7de40ffdf08f556293_400x400.jpeg',
+                'createdAt': '2022-10-26T03:15:02.327Z',
+                'updatedAt': '2022-10-26T03:15:02.327Z'
+            }
+        ])
+        await queryInterface.bulkInsert('Books', [
+            {
+                'id': 1,
+                'authorId': 1,
+                'noOfPages': 223,
+                'dateOfPublishing': '1997-06-25T17:00:00.000Z',
+                'illustrator': 'Cliff Wright',
+                'gerne': 'Fiction',
+                'publisher': 'Bloomsbury',
+                'img': 'https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg',
+                'name': 'Harry Potter and the Philosopher Stone',
+                'price': 50,
+                'description': 'As an intellectual object, a book is prototypically a composition of such great length that it takes a considerable investment of time to compose and still considered as an investment of time to read.',
+                'createdAt': '2022-10-26T03:15:02.332Z',
+                'updatedAt': '2022-10-26T03:15:02.332Z',
+            },
+            {
+                'id': 2,
+                'authorId': 1,
+                'noOfPages': 251,
+                'dateOfPublishing': '1998-07-01T17:00:00.000Z',
+                'illustrator': 'Cliff Wright',
+                'gerne': 'Fiction',
+                'publisher': 'Bloomsbury',
+                'img': 'https://upload.wikimedia.org/wikipedia/en/5/5c/Harry_Potter_and_the_Chamber_of_Secrets.jpg',
+                'name': 'Harry Potter and the Chamber of Secrets',
+                'price': 51,
+                'description': 'This is a Book',
+                'createdAt': '2022-10-26T03:15:02.335Z',
+                'updatedAt': '2022-10-26T03:15:02.335Z',
+            },
+            {
+                'id': 3,
+                'authorId': 1,
+                'noOfPages': 317,
+                'dateOfPublishing': '1999-07-07T17:00:00.000Z',
+                'illustrator': 'Cliff Wright',
+                'gerne': 'Fiction',
+                'publisher': 'Bloomsbury',
+                'img': 'https://upload.wikimedia.org/wikipedia/en/a/a0/Harry_Potter_and_the_Prisoner_of_Azkaban.jpg',
+                'name': 'Harry Potter and the Prisoner of Azkaban',
+                'price': 70,
+                'description': 'This is a Book',
+                'createdAt': '2022-10-26T03:15:02.337Z',
+                'updatedAt': '2022-10-26T03:15:02.337Z',
+            },
+            {
+                'id': 4,
+                'authorId': 1,
+                'noOfPages': 636,
+                'dateOfPublishing': '2000-07-07T17:00:00.000Z',
+                'illustrator': 'Cliff Wright',
+                'gerne': 'Fiction',
+                'publisher': 'Bloomsbury',
+                'img': 'https://upload.wikimedia.org/wikipedia/en/b/b6/Harry_Potter_and_the_Goblet_of_Fire_cover.png',
+                'name': 'Harry Potter and Goblet of Fire',
+                'price': 80,
+                'description': 'This is a Book',
+                'createdAt': '2022-10-26T03:15:02.339Z',
+                'updatedAt': '2022-10-26T03:15:02.339Z',
+            },
+            {
+                'id': 5,
+                'authorId': 1,
+                'noOfPages': 766,
+                'dateOfPublishing': '2003-06-20T17:00:00.000Z',
+                'illustrator': 'Cliff Wright',
+                'gerne': 'Fiction',
+                'publisher': 'Bloomsbury',
+                'img': 'https://upload.wikimedia.org/wikipedia/en/7/70/Harry_Potter_and_the_Order_of_the_Phoenix.jpg',
+                'name': 'Harry Potter and the Order of the Phoenix',
+                'price': 88,
+                'description': 'This is a Book',
+                'createdAt': '2022-10-26T03:15:02.342Z',
+                'updatedAt': '2022-10-26T03:15:02.342Z',
+            },
+            {
+                'id': 6,
+                'authorId': 1,
+                'noOfPages': 607,
+                'dateOfPublishing': '2005-07-15T17:00:00.000Z',
+                'illustrator': 'Cliff Wright',
+                'gerne': 'Fiction',
+                'publisher': 'Bloomsbury',
+                'img': 'https://upload.wikimedia.org/wikipedia/en/b/b5/Harry_Potter_and_the_Half-Blood_Prince_cover.png',
+                'name': 'Harry Potter and the Half-Blood Prince',
+                'price': 35,
+                'description': 'This is a Book',
+                'createdAt': '2022-10-26T03:15:02.344Z',
+                'updatedAt': '2022-10-26T03:15:02.344Z',
+            },
+            {
+                'id': 7,
+                'authorId': 1,
+                'noOfPages': 607,
+                'dateOfPublishing': '2007-07-20T17:00:00.000Z',
+                'illustrator': 'Cliff Wright',
+                'gerne': 'Fiction',
+                'publisher': 'Bloomsbury',
+                'img': 'https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg',
+                'name': 'Harry Potter and the Deathly Hallows',
+                'price': 20,
+                'description': 'This is a Book',
+                'createdAt': '2022-10-26T03:15:02.346Z',
+                'updatedAt': '2022-10-26T03:15:02.346Z',
+            },
+            {
+                'id': 8,
+                'authorId': 2,
+                'noOfPages': 512,
+                'dateOfPublishing': '1979-01-01T00:00:00.000Z',
+                'illustrator': null,
+                'gerne': 'Fiction',
+                'publisher': 'Hodder & Stoughton',
+                'img': 'https://upload.wikimedia.org/wikipedia/en/f/f3/KaneAndAbel.jpg',
+                'name': 'Kane and Abel',
+                'price': 44,
+                'description': 'This is a Book',
+                'createdAt': '2022-10-26T03:15:02.349Z',
+                'updatedAt': '2022-10-26T03:15:02.349Z',
+            },
+            {
+                'id': 9,
+                'authorId': 2,
+                'noOfPages': 400,
+                'dateOfPublishing': '2011-02-28T17:00:00.000Z',
+                'illustrator': null,
+                'gerne': 'Fiction',
+                'publisher': 'Macmillan',
+                'img': 'https://upload.wikimedia.org/wikipedia/en/f/fd/OnlyTimeWillTell.jpg',
+                'name': 'Only time will tell',
+                'price': 102,
+                'description': 'This is a Book',
+                'createdAt': '2022-10-26T03:15:02.351Z',
+                'updatedAt': '2022-10-26T03:15:02.351Z',
+            }
+        ])
+    },
+
+    async down (queryInterface, Sequelize) {
+    /**
+     * Add commands to revert seed here.
+     *
+     * Example:
+     * await queryInterface.bulkDelete('People', null, {});
+     */
+    }
+}

@@ -1,10 +1,10 @@
-import {Router} from 'express';
-import { seedData } from '../controllers/seed';
+import {Router} from 'express'
+import { seedData } from '../controllers/seed'
 
-const router = Router();
+const router = Router()
 
-router.post('/', seedData);
+router.post('/', seedData)
 
 export {
-	router as seedRouter
-};
+    router as seedRouter
+}

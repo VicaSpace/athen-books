@@ -1,10 +1,10 @@
-import {Router} from 'express';
-import { getAllBooks } from '../controllers/book';
+import {Router} from 'express'
+import { getAllBooks } from '../controllers/book'
 
-const router = Router();
+const router = Router()
 
-router.get('/', getAllBooks);
+router.get('/', getAllBooks)
 
 export {
-	router as bookRoute
-};
+    router as bookRoute
+}
